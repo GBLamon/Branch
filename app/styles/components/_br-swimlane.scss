@@ -1,0 +1,42 @@
+br-swimlane {
+  display: block;
+
+  // positioning context used for `.br-swimlane__lane-label`
+  position: relative;
+  // make space for `.br-swimlane__lane-label`
+  padding-left: 3rem;
+  // height of element
+  min-height: 200px;
+
+  br-element {
+    margin: 1rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+.br-swimlane__lane-label {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.br-swimlane__add-element {
+  position: absolute;
+  left: 1rem;
+  top: 4rem;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  cursor: pointer;
+  vertical-align: middle;
+  background-color: $blue;
+  line-height: 2rem;
+  border-radius: 50%;
+  color: #fff;
+  user-select: none;
+}
+
+

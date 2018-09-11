@@ -1,0 +1,14 @@
+{{#each decision.elements as |element|}}
+  {{#br-element brElement=element as |pieces|}}
+    <div>{{pieces.elementModel.reference}}</div>
+    <div class="br-element__title">{{pieces.elementModel.title}}</div>
+    <div class="br-element__descr">{{pieces.elementModel.desc}}</div>
+    {{#each element.options as |decisionOption|}}
+      <div {{action 'optionClicked' decision decisionOption}}>
+        {{#pieces.option option=decisionOption as |optionPieces|}}
+          {{optionPieces.label}}
+        {{/pieces.option}}
+      </div>
+    {{/each}}
+  {{/br-element}}
+{{/each}}

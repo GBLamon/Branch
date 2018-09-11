@@ -1,0 +1,18 @@
+<div class="br-swimlane__lane-label">
+  {{laneReference}}
+</div>
+{{#each elements as |element|}}
+  {{br-element
+      brElement=element
+      reference=element.reference
+      laneReference=laneReference
+      remove=attrs.removeElement
+      availableElements=availableElements
+      availableOptions=availableOptions
+      triggerRefresh=triggerRefresh
+  }}
+{{/each}}
+{{br-ghost-element
+  addElement=(action "addElement")
+  triggerRefresh=triggerRefresh
+}}

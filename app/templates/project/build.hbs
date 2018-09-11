@@ -1,0 +1,14 @@
+<div {{action 'saveAll'}}>Save</div>
+<div class="build__add-swimlane" {{action 'addSwimlane' 0}}>+</div>
+{{#each model.swimlanes as |swimlane index|}}
+  {{br-swimlane
+    swimlane=swimlane
+    laneReference=(add index 1)
+    removeSwimlane=(action 'removeSwimlane')
+    removeElement=(action 'removeElement')
+    availableElements=allElements
+    availableOptions=allOptions
+    triggerRefresh=(action 'triggerChanges')
+  }}
+  <div class="build__add-swimlane" {{action 'addSwimlane' (add index 1)}}>+</div>
+{{/each}}

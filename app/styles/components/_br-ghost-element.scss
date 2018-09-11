@@ -1,0 +1,29 @@
+// defined the br-element component with a
+// `--ghost` modifier
+br-element.--ghost {
+  border: 2px solid #fff;
+
+  .br-element__card,
+  .br-element__title,
+  .br-element__descr,
+  input {
+    color: #fff;
+    background: transparent;
+  }
+
+  br-element-option {
+    background-color: transparent;
+
+    input {
+      display: block;
+      margin: 0.5rem;
+      height: 1.5rem;
+      font-size: 1rem;
+      width: 90%;
+    }
+  }
+
+  input::placeholder {
+    color: #fff;
+  }
+}

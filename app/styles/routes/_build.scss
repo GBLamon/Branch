@@ -1,0 +1,12 @@
+.build__add-swimlane {
+  display: inline-block;
+  color: $olivine;
+  font-size: 3.5rem;
+  margin: 2.5rem;
+  cursor: pointer;
+  opacity: 0.8;
+
+  &:hover {
+      opacity: 1;
+  }
+}

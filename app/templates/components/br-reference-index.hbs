@@ -1,0 +1,14 @@
+<ul>
+  {{#each-in indexes as |index items|}}
+    <li>
+      {{index}}
+      <ul>
+      {{#each items as |item|}}
+        <li>
+          {{yield item (action 'toggleElement' item)}}
+        </li>
+      {{/each}}
+      </ul>
+    </li>
+  {{/each-in}}
+</ul>

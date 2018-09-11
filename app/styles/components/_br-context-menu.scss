@@ -1,0 +1,33 @@
+br-context-menu {
+  display: block;
+}
+
+.br-context-menu__menu {
+  border: 3px solid #000;
+  background-color: #fff;
+  padding: 0.5rem;
+  margin-left: 1em;
+  margin-top: 0.25rem;
+  max-width: 250px;
+}
+
+.br-context-menu__trigger {
+  transform: rotate(90deg);
+  transform-origin: right;
+  cursor: pointer;
+}
+
+.br-context-menu__delete-bar {
+  border-bottom: 1px solid #000;
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.25rem;
+  text-align: right;
+}
+
+.br-context-menu__delete-button {
+  cursor: pointer;
+}
+
+.br-context-menu__delete-x {
+  margin-left: 1rem;
+}

@@ -1,0 +1,25 @@
+{{#br-context-menu}}
+  {{#if showDelete}}
+  <div class="br-context-menu__delete-bar" {{action 'deleteOption'}}>
+    <div class="br-context-menu__delete-button">
+      Delete Element<span class="br-context-menu__delete-x">&#10060;</span>
+    </div>
+  </div>
+  {{/if}}
+  {{#if connectableElements.length}}
+    {{#each connectableElements as |element|}}
+      <div>
+        {{input
+          type="checkbox"
+          click=(action 'toggleElement' element)
+          checked=(includes element.pointedFrom option)
+        }}
+        {{element.title}}
+      </div>
+    {{/each}}
+  {{else}}
+    <em>
+      Create another element to be able to connect this option.
+    </em>
+  {{/if}}
+{{/br-context-menu}}

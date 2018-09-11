@@ -1,0 +1,56 @@
+{{#if hasBlock}}
+  <div class="br-element__card">
+    {{yield (hash
+      elementModel=brElement
+      option=(component 'br-element-option')
+    )}}
+  </div>
+{{else}}
+  <div class="br-element__card">
+    {{#if (not isGhost)}}
+      <div class="br-element__card-reference">
+        {{reference}}
+      </div>
+    {{/if}}
+    {{br-element-connected-options
+      elementModel=brElement
+      availableOptions=availableOptions
+      triggerRefresh=triggerRefresh
+      showDelete=(not isGhost)
+    }}
+    {{input
+      value=brElement.title
+      focus-out=(action 'onFocusOut')
+      type="text"
+      class="br-element__title"
+      placeholder="Title"
+      insert-newline=(action "unfocus")
+    }}
+    {{#if (not isGhost)}}
+      {{input
+        value=brElement.desc
+        focus-out=(action 'onFocusOut')
+        type="text"
+        class="br-element__descr"
+        placeholder="Description"
+        insert-newline=(action "unfocus")
+      }}
+    {{/if}}
+    <div class="br-element__options">
+      {{#each brElement.options as |option|}}
+        {{br-element-option
+          option=option
+          elementAttachedTo=brElement
+          availableElements=availableElements
+          triggerRefresh=triggerRefresh
+        }}
+      {{/each}}
+      {{br-ghost-element-option
+        elementAttachedTo=brElement
+        availableElements=availableElements
+        addOption=(action 'addOption')
+        triggerRefresh=triggerRefresh
+      }}
+    </div>
+  </div>
+{{/if}}

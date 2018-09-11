@@ -1,0 +1,18 @@
+<div class="br-context-menu__trigger" {{action 'toggleOpen'}}>
+  ...
+</div>
+{{#if isOpened}}
+  <div>
+    {{#ember-tether
+        target=(concat '#' elementId ' .br-context-menu__trigger')
+        targetAttachment='top right'
+        attachment='top left'
+    }}
+      {{#click-outside action=(action "close") except-selector=".br-context-menu__menu"}}
+        <div class="br-context-menu__menu">
+          {{yield}}
+        </div>
+      {{/click-outside}}
+    {{/ember-tether}}
+  </div>
+{{/if}}

@@ -1,0 +1,19 @@
+{{#if hasBlock}}
+  {{yield (hash
+    label=option.label
+  )}}
+{{else}}
+  {{input
+    class="br-element-option__label"
+    value=option.label
+    placeholder="-"
+    blur=(action "stopEditingLabel")
+    insert-newline=(action "stopEditingLabel")
+  }}
+  {{br-option-connected-elements
+    option=option
+    availableElements=availableElements
+    triggerRefresh=(action triggerRefresh)
+    showDelete=true
+  }}
+{{/if}}

@@ -1,0 +1,8 @@
+br-element-option.--ghost {
+  input {
+    background: transparent;
+    &, &::placeholder {
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+br-element {
+  width: 225px;
+  color: $charcoal;
+  display: block;
+}
+
+.br-element__card {
+  background-color: #fff;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  padding: 0.75em;
+ }
+
+.br-element__card-reference {
+  color: #000;
+  width: 1rem;
+}
+
+.br-element__title,
+.br-element__descr {
+  display: block;
+
+  cursor: pointer;
+  &, &::placeholder {
+    color: #000;
+  }
+}
+
+.br-element__title {
+  display: block;
+  font-size: 1.4em;
+  margin-bottom: 1em;
+  width: 85%;
+}
+
+.br-element__descr {
+  display: block;
+  line-height: 0.5em;
+  font-size: 1rem;
+}
+
+.br-element__corner-options {
+  position: absolute;
+  display: none;
+  top: 3px;
+  right: 0;
+
+  // show on hover of `br-element`
+  br-element:hover & {
+    display: block;
+  }
+}
+
+br-element br-context-menu {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}

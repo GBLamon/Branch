@@ -1,0 +1,14 @@
+.app-header {
+  background-color: $paleBlue;
+  padding-left: $horziontalPagePadding;
+  padding-right: $horziontalPagePadding;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  width: 100%;
+}
+
+.app-header__logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+}

@@ -1,0 +1,18 @@
+br-decision {
+  display: block;
+  text-align: center;
+
+  & + & {
+    margin-top: 2rem;
+  }
+}
+
+br-decision br-element {
+  display: inline-block;
+  text-align: left;
+  vertical-align: top;
+}
+
+br-decision br-element + br-element {
+  margin-left: 1rem;
+}

@@ -1,0 +1,18 @@
+{{#if expanded}}
+  {{#click-outside action=(action "collapse") except-selector=".br-context-menu__menu"}}
+    {{input
+      type="text"
+      value=optionName
+      placeholder="option label"
+      insert-newline=(action "addOption")
+    }}
+    {{br-option-connected-elements
+      triggerRefresh=attrs.triggerRefresh
+      elements=filteredAvailableElements
+      selectedUpdated=(action 'selectedElementsUpdated')
+      showDelete=false
+    }}
+  {{/click-outside}}
+{{else}}
+  + Option
+{{/if}}

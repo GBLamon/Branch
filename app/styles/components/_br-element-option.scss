@@ -1,0 +1,36 @@
+br-element-option {
+  position: relative;
+  display: block;
+  padding: 0.25em 0.75em;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 1.25em;
+  font-size: 0.85em;
+  box-sizing: border-box;
+  transition: background-color ease-in-out 0.5s;
+  background-color: $silver;
+
+  & + & {
+    margin-top: 0.7em;
+  }
+
+  &.--is-active {
+    background-color: darken($blue, 10%);
+    color: #fff;
+  }
+
+  br-context-menu {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.75rem;
+  }
+}
+
+.br-element-option {
+  display: inline-block;
+}
+
+.br-element-option__label {
+  background: transparent;
+  color: #fff;
+}
